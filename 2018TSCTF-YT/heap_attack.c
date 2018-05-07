@@ -2,8 +2,9 @@
 #include<stdlib.h>
 #include<string.h>
 #include <unistd.h>
+
 char *s[12];
-char tmp[48];
+
 void prepare()
 {
     setvbuf(stdin,0,2,0);
@@ -55,12 +56,12 @@ void editBlock()
     int index,len;
     printf("Input index:");
     scanf("%d",&index);
+    getchar();
 
     if(index>=0 && index<=9)
     {
 	len = strlen(s[index]);
         inputContent(s[index],len+1);
-	inputContent(tmp,48);
         printf("Successfully edit.\n");
     }
 }
