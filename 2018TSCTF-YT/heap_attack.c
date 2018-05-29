@@ -11,9 +11,9 @@ void prepare()
     setvbuf(stdout,0,2,0);
     setvbuf(stderr,0,2,0);
 }
-void cat()
+void echo()
 {
-    system("cat TSCTF.txt");
+    system("echo 'welcome to TSCTF!'");
 }
 void inputContent(char *buf,int len)
 {
@@ -28,7 +28,7 @@ void newBlock()
 
     printf("Input size:");
     scanf("%d",&size);
-    getchar();
+    //getchar();
     block = malloc(size);
     inputContent(block,size);
 
@@ -43,7 +43,7 @@ void deleteBlock()
     int index;
     printf("Input index:");
     scanf("%d",&index);
-    getchar();
+    //getchar();
     
     if(index>=0 && index<=9)
     {
@@ -69,14 +69,14 @@ int main()
 {
     int num;
     prepare();
-    cat();
+    echo();
     while(1)
     {
         printf("===============menu==============\n");
 	printf("1.Add\n2.Delete\n3.Edit\n");
         printf("Input ur choice:");
         scanf("%d",&num);
-        getchar();
+        //getchar();
 	switch(num)
 	{
 	    case 1:
