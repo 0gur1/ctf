@@ -1,0 +1,25 @@
+input choice:
+3
+plz input title
+11
+11
+content: 
+3333
+input choice:
+1
+input content size
+
+content size must be positive and below 1024
+input choice:
+2
+plz input title
+1 
+plz input new content
+23333333333333
+edit success
+input choice:
+3
+plz input title
+1
+invalid title
+input choice:

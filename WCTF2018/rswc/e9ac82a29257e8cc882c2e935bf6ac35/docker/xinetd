@@ -1,0 +1,18 @@
+service rswc
+{
+    disable = no
+    type = UNLISTED
+    wait = no
+    server = /home/chall/launch.sh
+    socket_type = stream
+    protocol = tcp
+    user = user
+    port = 31337
+    flags = REUSE
+    per_source = 5
+    rlimit_cpu = 3
+    nice = 18
+    log_type = FILE /root/xinetd.log
+    log_on_success = HOST PID
+    log_on_failure = HOST ATTEMPT
+}
